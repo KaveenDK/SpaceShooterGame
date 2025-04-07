@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Shooter Game By KaveeN</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/assets/images/space-shooter-game-logo.png" />
+  </head>
+  <body class="bg-dark">
+    <div class="container my-4">
+      <h1 class="text-center text-white mb-4">Space Shooter</h1>
+
+      <div class="text-center mb-3" id="startScreen">
+        <button id="startBtn" class="btn btn-success btn-lg">Start Game</button>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div class="card bg-dark text-white">
+            <div class="card-body">
+              <h4>Score: <span id="score">0</span></h4>
+              <h4>Level: <span id="level">1</span></h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-end">
+          <button id="restartBtn" class="btn btn-danger btn-lg">Restart</button>
+        </div>
+      </div>
+
+      <div id="gameArea">
+        <div id="hud">
+          <div>Score: <span id="hudScore">0</span></div>
+          <div>Level: <span id="hudLevel">1</span></div>
+        </div>
+      </div>
+
+      <div class="mobile-controls">
+        <button class="btn btn-lg btn-primary move-left">←</button>
+        <button class="btn btn-lg btn-danger shoot">Fire</button>
+        <button class="btn btn-lg btn-primary move-right">→</button>
+      </div>
+
+      <div class="modal fade" id="gameOverModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
+              <h2 class="modal-title text-danger">Game Over!</h2>
+            </div>
+            <div class="modal-body text-center">
+              <h4>Final Score: <span id="finalScore">0</span></h4>
+              <h4>Highest Level: <span id="maxLevel">1</span></h4>
+            </div>
+            <div class="modal-footer border-0">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                id="modalRestartBtn"
+                type="button"
+                class="btn btn-success"
+              >
+                Play Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
